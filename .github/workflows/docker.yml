@@ -58,7 +58,7 @@ jobs:
             type=raw,value=${{ steps.vars.outputs.date }}
             type=raw,value=${{ format('{0}-{1}', steps.branch-name.outputs.current_branch, steps.vars.outputs.short-sha) }}
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           push: true
           context: ${{ inputs.build-context }}
